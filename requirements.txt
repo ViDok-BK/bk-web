@@ -1,9 +1,7 @@
+rdkit
+vina
 flask==2.0.2
 flask-cors
-numpy
-pandas
-rdkit
-openbabel
 flask_login==0.5.0
 flask_migrate==3.1.0
 WTForms==3.0.1

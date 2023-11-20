@@ -1,13 +1,14 @@
-FROM python:3.9
+FROM conda/miniconda3:latest
 
 COPY . .
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
+ENV SCRIPT_NAME "/vidok"
 
 # install python dependencies
-RUN pip install --upgrade pip
+RUN bash install.sh
 RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 10007
